@@ -23,7 +23,7 @@ Instagram, Threads và TikTok. Chính sách này nói rõ ứng dụng dùng d�
 <ul>
   <li><b>Mã truy cập (access token)</b> của Trang Facebook, tài khoản Instagram chuyên nghiệp liên kết với Trang và tài khoản Threads,
     do chủ tài khoản tự dán vào ứng dụng.</li>
-  <li><b>Mã khoá ứng dụng TikTok</b> (Client key, Client secret) của cửa hàng do người quản lý dán vào ứng dụng, và <b>mã truy cập,
+  <li><b>Mã khoá ứng dụng TikTok</b> (Client key, Client secret) của cửa hàng, có sẵn trong bản cài của ứng dụng, và <b>mã truy cập,
     mã làm mới</b> TikTok cấp sau khi chủ tài khoản TikTok đăng nhập và đồng ý.</li>
   <li><b>Thông tin tài khoản cơ bản</b> đọc từ Meta: mã và tên Trang, mã và tên người dùng Instagram/Threads; đọc từ TikTok:
     mã, tên người dùng và tên hiển thị của tài khoản TikTok.</li>
@@ -46,7 +46,7 @@ Instagram, Threads, TikTok khác.</p>
 <h2>3. Nơi lưu trữ</h2>
 <ul>
   <li>Mã truy cập và lịch sử đăng <b>chỉ lưu trên điện thoại</b> cài ứng dụng, trong bộ nhớ riêng của ứng dụng;
-    mã truy cập và mã khoá ứng dụng TikTok nằm ở vùng không sao lưu nên không rời khỏi máy qua bản sao lưu. Ứng dụng không có máy chủ riêng lưu dữ liệu này.</li>
+    mã truy cập và mã làm mới TikTok nằm ở vùng không sao lưu nên không rời khỏi máy qua bản sao lưu. Ứng dụng không có máy chủ riêng lưu dữ liệu này.</li>
   <li>Mã truy cập luôn được gửi trong phần đầu (header) của yêu cầu tới máy chủ Meta hoặc TikTok, không nằm trong đường dẫn và không được ghi vào nhật ký.
     Client secret và mã làm mới TikTok chỉ được gửi tới máy chủ TikTok trong phần thân yêu cầu, cũng không được ghi vào nhật ký.</li>
   <li>Video đăng lên TikTok được tải thẳng từ điện thoại lên máy chủ TikTok, không qua dịch vụ lưu trữ tạm nào.</li>
@@ -63,7 +63,7 @@ tới dịch vụ lưu trữ tạm nêu ở mục 3. Không có bên nào khác 
 <h2>5. Xoá dữ liệu</h2>
 <ul>
   <li><b>Ngắt kết nối</b>: trong ứng dụng, vào Cài đặt → “Dành cho quản lý” → “Fanpage và Instagram”, “Threads” hoặc “TikTok” → Ngắt kết nối. Mã truy cập
-    (với TikTok: cả Client key/secret và mã làm mới) bị xoá khỏi máy ngay.</li>
+    (với TikTok: cả mã làm mới) bị xoá khỏi máy ngay.</li>
   <li><b>Xoá lịch sử</b>: ở tab “Đăng bài”, bấm nút ⋮ trên từng bài trong “Bài đã đăng gần đây” → “Xoá khỏi lịch sử”.</li>
   <li><b>Xoá toàn bộ</b>: gỡ cài đặt ứng dụng hoặc xoá dữ liệu ứng dụng trong Cài đặt Android; mọi dữ liệu nêu trên bị xoá khỏi máy.</li>
   <li><b>Thu hồi quyền phía Meta</b>: Facebook → Cài đặt và quyền riêng tư → Cài đặt → Ứng dụng và trang web → gỡ ứng dụng;
@@ -85,7 +85,7 @@ the Instagram professional account linked to it, Threads and TikTok.</p>
 
 <h2>Data we use</h2>
 <p>Access tokens for the shop's Facebook Page, Instagram and Threads accounts (pasted in by the account owner); the Client key and
-Client secret of the shop's TikTok app (pasted in by the manager) and the TikTok access and refresh tokens issued after the TikTok
+Client secret of the shop's TikTok app (built into the app) and the TikTok access and refresh tokens issued after the TikTok
 account owner logs in and consents; basic account information from Meta (Page ID and name, Instagram/Threads user ID and username)
 and from TikTok (open ID, username and display name); the videos, captions and hashtags staff choose
 to post; and a posting history (times, results and links to the posts). We do not collect contacts, location, messages,
@@ -98,7 +98,7 @@ account's inbox as drafts, and staff finish posting in the TikTok app. Because T
 refreshes them daily with the refresh token and the Client key/secret. Data is never used for advertising, sold, or shared for commercial purposes.</p>
 
 <h2>Where it is stored</h2>
-<p>Tokens and history are stored only on the phone running the app, in the app's private storage (tokens and the TikTok app keys in
+<p>Tokens and history are stored only on the phone running the app, in the app's private storage (tokens, TikTok's refresh token included, in
 the no-backup area). There is no server of ours holding this data. Access tokens are sent to Meta or TikTok only in request headers;
 the TikTok Client secret and refresh token are sent only to TikTok in request bodies; none of them are ever logged. TikTok videos
 are uploaded straight from the phone to TikTok, with no temporary host.
