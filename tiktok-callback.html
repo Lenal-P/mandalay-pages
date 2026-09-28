@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mandalay – Kết nối TikTok</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 560px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #1f2937; }
+  h1 { font-size: 1.4rem; }
+  .ok { color: #16a34a; } .err { color: #dc2626; }
+</style>
+</head>
+<body>
+<!-- Where TikTok sends the manager back after logging in (Login Kit redirect URI).
+     The Mandalay app reads the code from this page's address itself; nothing is sent anywhere from here. -->
+<h1>Kết nối TikTok với Mandalay</h1>
+<p id="msg">Đang đọc kết quả…</p>
+<script>
+  var q = new URLSearchParams(location.search);
+  var msg = document.getElementById('msg');
+  if (q.get('error')) {
+    msg.className = 'err';
+    msg.textContent = 'TikTok báo lỗi: ' + (q.get('error_description') || q.get('error')) + '. Quay lại Mandalay và bấm Kết nối lần nữa.';
+  } else if (q.get('code')) {
+    msg.className = 'ok';
+    msg.textContent = 'Đăng nhập TikTok xong. Quay lại ứng dụng Mandalay để hoàn tất kết nối.';
+  } else {
+    msg.textContent = 'Trang này dùng khi kết nối TikTok trong ứng dụng Mandalay.';
+  }
+</script>
+</body>
+</html>
